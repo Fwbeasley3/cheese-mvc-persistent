@@ -7,38 +7,21 @@ import javax.validation.constraints.NotNull;
 
 public class AddMenuItemForm {
 
-    private Menu menu;
-
-    private Iterable<Cheese> cheeses;
-
     @NotNull
     private int menuId;
 
     @NotNull
     private int cheeseId;
 
-    public AddMenuItemForm(Menu menu, Iterable<Cheese> all) {};
+    private Iterable<Cheese> cheeses;
 
-    public AddMenuItemForm(int menuId, int cheeseId){
-        this.menuId = menuId;
-        this.cheeseId = cheeseId;
-  }
+    private Menu menu;
 
+    public AddMenuItemForm() {};
 
-    public Menu getMenu() {
-        return menu;
-    }
-
-    public void setMenu(Menu menu) {
-        this.menu = menu;
-    }
-
-    public Iterable<Cheese> getCheeses() {
-        return cheeses;
-    }
-
-    public void setCheeses(Iterable<Cheese> cheeses) {
+    public AddMenuItemForm(Iterable<Cheese> cheeses, Menu menu){
         this.cheeses = cheeses;
+        this.menu = menu;
     }
 
     public int getMenuId() {
@@ -56,7 +39,31 @@ public class AddMenuItemForm {
     public void setCheeseId(int cheeseId) {
         this.cheeseId = cheeseId;
     }
+
+    public Iterable<Cheese> getCheeses() {
+        return cheeses;
+    }
+
+    public Menu getMenu() {
+        return menu;
+    }
+
+    public void setMenu(Menu menu) {
+        this.menu = menu;
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
